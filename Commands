@@ -9,3 +9,11 @@
 
 SELECT Personal_info.Prisoner_id, Personal_info.Name, Prisoner_records.IPC_code FROM Personal_info INNER JOIN Prisoner_records on Personal_info.Prisoner_id = Prisoner_records.Prisoner_id;
 SELECT Distinct Personal_info.Name FROM Personal_info LEFT JOIN Prisoner_records on Personal_info.Prisoner_id = Prisoner_records.Prisoner_id WHERE Prisoner_records.IPC_code is NULL;
+SELECT Name, DATEDIFF(NOW(), DOB)/365.25 as Age FROM Personal_info where DATEDIFF(NOW(), DOB)/365.25 < 50; 
+#SELECT AVG (DATEDIFF(NOW(), DOB)/365.25) FROM Personal_info;  
+#SELECT COUNT (*) FROM Personal_info;
+#SELECT COUNT (*) FROM Personal_info where DATEDIFF(NOW(), DOB)/365.25 > 30 AND DATEDIFF(NOW(), DOB)/365.25 < 40;
+SELECT Name FROM Personal_info where DATEDIFF(NOW(), DOB)/365.25 < 30 OR DATEDIFF(NOW(), DOB)/365.25 > 40;
+SELECT MAX(DATEDIFF(NOW(), DOB)) as age FROM Personal_info; 
+SELECT Name FROM Personal_info where DATEDIFF(NOW(), DOB) = 14833; 
+SELECT COUNT (*) FROM Personal_info INNER JOIN Building_info on Building_info.Cell = Personal_info.Cell WHERE Building_info.floor = 103
