@@ -1,0 +1,48 @@
+CREATE TABLE Personal_info (
+  Prisoner_id INT, Name TEXT, DOB DATE, cell TEXT, DOA DATE
+);
+
+INSERT INTO Personal_info VALUES (1, "abc", "1980-12-14", "A", "2008-12-14");
+INSERT INTO Personal_info VALUES (2, "def", "1981-12-14", "B", "2009-12-15");
+INSERT INTO Personal_info VALUES (3, "ghi", "1982-12-14", "C", "2011-12-16");
+INSERT INTO Personal_info VALUES (4, "amit", "1983-12-14", "A", "2001-12-17");
+INSERT INTO Personal_info VALUES (5, "arun", "1984-12-14", "B", "2002-12-18");
+INSERT INTO Personal_info VALUES (6, "ajay", "1985-12-14", "C", "2003-12-19");
+INSERT INTO Personal_info VALUES (7, "ashok", "1986-12-14", "A", "2004-12-11");
+INSERT INTO Personal_info VALUES (8, "aman", "1987-12-14", "B", "2005-12-12");
+INSERT INTO Personal_info VALUES (9, "amit", "1988-12-14", "C", "2006-12-13");
+INSERT INTO Personal_info VALUES (10, "alok", "1989-12-14", "A", "2007-12-23");
+
+
+CREATE TABLE IPC_CODE (
+	IPC_no INT, IPC_desc TEXT, Max_sentance INT
+);
+
+INSERT INTO IPC_CODE VALUES (123, "Golmaal", 15);
+INSERT INTO IPC_CODE VALUES (234, "Hungama", 20);
+INSERT INTO IPC_CODE VALUES (345, "Hera pheri", 25);
+INSERT INTO IPC_CODE VALUES (498, "Dowry", 28);
+INSERT INTO IPC_CODE VALUES (307, "Violence", 30);
+INSERT INTO IPC_CODE VALUES (420, "Dhokhadhadi", 32);
+
+CREATE TABLE Prisoner_records (
+	Prisoner_id INT, IPC_code INT
+);
+
+INSERT INTO Prisoner_records VALUES (1, 498);
+INSERT INTO Prisoner_records VALUES (1, 307);
+INSERT INTO Prisoner_records VALUES (2, 234);
+INSERT INTO Prisoner_records VALUES (2, 420);
+INSERT INTO Prisoner_records VALUES (3, 345);
+INSERT INTO Prisoner_records VALUES (2, 345);
+INSERT INTO Prisoner_records VALUES (3, 123);
+INSERT INTO Prisoner_records VALUES (3, 498);
+INSERT INTo Prisoner_records VALUES (1, 234);
+
+CREATE TABLE Building_info (
+	Ceil_id TEXT, floor INT, capacity INT
+);
+
+INSERT INTO Building_info VALUES ("A", 101, 50);
+INSERT INTO Building_info VALUES ("B", 102, 100);
+INSERT INTO Building_info VALUES ("C", 103, 150);
